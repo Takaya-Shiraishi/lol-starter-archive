@@ -11,7 +11,7 @@ const config = {
   title: 'lol-starter-archive',
   staticDirectories:['static'],
   tagline: 'Starter Archive',
-  favicon: 'img/favicon.ico',
+  favicon: '/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://takaya-shiraishi.github.io',
@@ -41,6 +41,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath:'/',
           sidebarPath: './sidebars.js',
           remarkPlugins: [require('remark-breaks')]
           // Please change this to your repo.
