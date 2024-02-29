@@ -1,0 +1,28 @@
+.cardList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* カード間のスペース */
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .card {
+    width: 240px; /* カードの幅 */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card h3 {
+    margin: 10px;
+  }
+  
+  .card p {
+    margin: 10px;
+  }
+  

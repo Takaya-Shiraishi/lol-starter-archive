@@ -1,0 +1,73 @@
+---
+sidebar_position: 6
+---
+# チームプレイとコミュニケーション
+![ホイールピンとその役割](/img/UIとルール/pingWheel.png)
+
+これはホイールピンです。  
+LoLはチームでの連携が重要な場面が多くあります。  
+チャットをオフにしているような状況でも、ホイールピンで自分の意思表示をしましょう。  
+
+:::tip ホイールピンの使い方
+
+CtrlキーまたはAltを押しながら左クリックでピンホイールを開きます。   
+マウスカーソルをドラッグし選択したピンを指すことが可能です。  
+最初の内は自分の行きたい場所をピンするところから始めましょう。  
+ピンはマップにも表示されるのでピンの音が鳴ったらマップを見る癖をつけましょう。  
+
+:::
+
+ピンを刺すとこんな風に表示されます。
+![オールイン](/img/UIとルール/ピン/オールイン.png)
+
+
+import CardList from '@site/src/components/CardList';
+
+export const cardsData = [
+  {
+    title: 'オールイン',
+    imageUrl: '/img/UIとルール/ピン/オールイン.png'
+  },
+  {
+    title: 'ピン',
+    imageUrl: '/img/UIとルール/ピン/ピン.png'
+  },
+  {
+    title: 'プッシュ',
+    imageUrl: '/img/UIとルール/ピン/プッシュ.png'
+  },
+  {
+    title: '移動中',
+    imageUrl: '/img/UIとルール/ピン/移動中.png'
+  },
+  {
+    title: '後退',
+    imageUrl: '/img/UIとルール/ピン/後退.png'
+  },
+  {
+    title: '視界が必要',
+    imageUrl: '/img/UIとルール/ピン/視界が必要.png'
+  },
+  {
+    title: '手伝って',
+    imageUrl: '/img/UIとルール/ピン/手伝って.png'
+  },
+  {
+    title: '注意',
+    imageUrl: '/img/UIとルール/ピン/注意.png'
+  },
+  {
+    title: '敵が視界をとっている',
+    imageUrl: '/img/UIとルール/ピン/敵が視界をとっている.png'
+  },
+  {
+    title: '敵を見失った',
+    imageUrl: '/img/UIとルール/ピン/敵を見失った.png'
+  },
+];
+
+
+<details>
+    <summary><h3>ピンの詳細一覧はここをクリックで展開できます</h3></summary>
+    <CardList cards={cardsData} />
+</details>
