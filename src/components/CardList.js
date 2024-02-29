@@ -3,7 +3,7 @@ import styles from './CardList.module.css';
 
 const Card = ({ title, imageUrl}) => (
   <div className={styles.card}>
-    <img src={imageUrl} alt={title} />
+    <img src={'/lol-starter-archive/'+imageUrl} alt={title} />
     <h3>{title}</h3>
   </div>
 );

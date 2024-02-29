@@ -9,6 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'lol-starter-archive',
+  staticDirectories:['static'],
   tagline: 'Starter Archive',
   favicon: 'img/favicon.ico',
 
@@ -57,12 +58,12 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/logo.webp',
+      image: '/logo.webp',
       navbar: {
         title: 'LoL Starter Archive',
         logo: {
           alt: 'LSAlogo',
-          src: 'img/logo.logo.webp',
+          src: '/logo.webp',
         },
         items: [
           {

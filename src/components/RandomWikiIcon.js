@@ -4,6 +4,9 @@ const RandomWikiIcon = () => {
   const [iconPath, setIconPath] = useState('');
 
   useEffect(() => {
+    // baseURLの設定
+    const baseURL = '/lol-starter-archive';
+
     // アイコンのファイルパスを配列に格納
     const icons = [
       '/img/!webIcon/wikiicon1.webp',
@@ -13,9 +16,9 @@ const RandomWikiIcon = () => {
       '/img/!webIcon/wikiicon5.webp',
     ];
 
-    // 配列からランダムに1つのパスを選択
+    // 配列からランダムに1つのパスを選択し、baseURLを追加してiconPathに設定
     const randomIconPath = icons[Math.floor(Math.random() * icons.length)];
-    setIconPath(randomIconPath);
+    setIconPath(baseURL + randomIconPath);
   }, []); // 空の依存配列を渡すことで、コンポーネントのマウント時にのみ実行
 
   return (

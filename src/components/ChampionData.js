@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Box, Button, Grid, Card, CardActionArea, CardMedia, Dialog, DialogTitle, DialogContent, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+import { Box, Button, Grid, Card, CardActionArea, CardMedia, Dialog, DialogTitle, DialogContent, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, FormControl, InputLabel, Select, MenuItem, Link } from '@mui/material';
 import championData from '/ChampionData.json';
 import DamageBarChart from './DamageChart';
 
@@ -69,13 +69,18 @@ const ChampionGallery = () => {
         {filterChampions().map((championName) => (
           <Grid item xs={1.5} key={championName}>
             <Card>
-              <CardActionArea onClick={() => handleClickOpen(championName)}>
-                <CardMedia
-                  component="img"
-                  sx={{ maxWidth:"100", maxHeight:"100" }}
-                  image={`/img/チャンピオン/サモナーアイコン/${championName}/${championName}.jpg`}
-                  alt={championName}
-                />
+              <CardActionArea onClick={(event) => {
+                event.preventDefault();
+                handleClickOpen(championName);
+              }}>
+                <Link href={`/lol-starter-archive/${championName}`} underline="none">
+                  <CardMedia
+                    component="img"
+                    sx={{ maxWidth:"100", maxHeight:"100" }}
+                    image={`/lol-starter-archive/img/チャンピオン/サモナーアイコン/${championName}/${championName}.jpg`}
+                    alt={championName}
+                  />
+                </Link>
               </CardActionArea>
             </Card>
           </Grid>
@@ -87,7 +92,7 @@ const ChampionGallery = () => {
           <DialogContent>
             <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
               <img
-                src={`/img/チャンピオン/サモナーアイコン/${selectedChampionName}/${selectedChampionName}.jpg`}
+                src={`/lol-starter-archive/img/チャンピオン/サモナーアイコン/${selectedChampionName}/${selectedChampionName}.jpg`}
                 alt={selectedChampionName}
                 style={{ maxWidth: '100px', maxHeight: '100px' }}
               />
